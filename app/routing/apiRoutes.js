@@ -1,10 +1,10 @@
+var list = require("../info/restable.js")
+module.exports = function (app) {
 
-// module.exports = function (app) {
-
-//     app.get('/api/characters', function (req, res) {
-//       res.json(characters);
-//       console.log(characters)
-//     });
+    app.get('/api/table', function (req, res) {
+      res.json(list);
+      console.log(list)
+    });
   
 //   app.post("/api/new", function (req, res) {
 //     // newFriend is the user that filled out the survey
@@ -18,4 +18,4 @@
 //   });
   
   
-//   };
+   };
