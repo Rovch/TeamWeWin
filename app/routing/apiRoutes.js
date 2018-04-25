@@ -5,6 +5,13 @@ module.exports = function (app) {
       res.json(list);
       console.log(list)
     });
-  
-  
+    app.post('/api/addtable', function (req, res) {
+
+        var newTable = req.body
+
+        list.push(newTable)
+        
+        res.json(list);
+        console.log(list)
+      });
    };

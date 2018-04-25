@@ -54,7 +54,15 @@
                       </table>
         </div>
     <script>
-        $.get("/api/table", function (list){
+
+$("#submit").on('click', function(){
+    var userInput = {
+        name: "Obi",
+        count:5}
+})
+
+
+        $.post("/api/addtable", someinformation, function (list){
             console.log("inside of post")
             console.log(list)
             console.log("adding to....")
