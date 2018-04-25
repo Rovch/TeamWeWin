@@ -64,6 +64,7 @@
       // console.log(list)
       // console.log("adding to....")
 
+<<<<<<< HEAD
       for (var i = 0; i < list.length; i++) {
         var tr = $("<tr>");
         var td = $("<td>");
@@ -78,6 +79,54 @@
     })
 
   </script>
+=======
+                <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Party Number</th>
+                            <th scope="col">Reservation</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>4</td>
+                            <td>12</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>2</td>
+                            <td>13</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>9</td>
+                            <td>5</td>
+                          </tr>
+                        </tbody>
+                      </table>
+        </div>
+    <script>
+
+$("#submit").on('click', function(){
+    var userInput = {
+        name: "Obi",
+        count:5}
+})
+
+
+        $.post("/api/addtable", someinformation, function (list){
+            console.log("inside of post")
+            console.log(list)
+            console.log("adding to....")
+        })
+    </script>
+>>>>>>> 68313863c6a100741f27e017a64ce334c03cd125
 
 </body>
 
