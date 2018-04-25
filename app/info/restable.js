@@ -5,8 +5,7 @@ var list = [ {
 {
     "name" : "Sergey",
     "count":10
-},
-
+}
 ]
 
 module.exports = list;

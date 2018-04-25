@@ -6,7 +6,7 @@ var path = require("path");
 //express info
 //=============================================================
 var app = express();
-var PORT = process.env.PORT || 3340;
+var PORT = process.env.PORT || 3341;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
