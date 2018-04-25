@@ -33,28 +33,9 @@
           <th scope="col">#</th>
           <th scope="col">Name</th>
           <th scope="col">Party Number</th>
-          <th scope="col">Reservation</th>
         </tr>
       </thead>
       <tbody id="tBody">
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>4</td>
-          <td>12</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>2</td>
-          <td>13</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>9</td>
-          <td>5</td>
-        </tr>
       </tbody>
     </table>
   </div>
@@ -67,9 +48,15 @@
       for (var i = 0; i < list.length; i++) {
         var tr = $("<tr>");
         var td = $("<td>");
+        var td2 = $("<td>");
+        var td3 = $("<td>")
         var name = list[i].name;
         var count = list[i].count;
-        tr.append(name)
+        var test = [i];
+        td3.append(test)
+        td2.append(name)
+        td.append(count)
+        tr.append(td3, td2, td)
         $("#tBody").append(tr);
 
 
