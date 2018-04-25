@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <title>Document</title>
+  <title>Document</title>
 </head>
+
 <body>
 
-        <div class="container">
-                <div class="jumbotron text-center">
-                  <h1>eAt FoOd HeRe</h1>
-                  <h3>YuMmY</h3>
-            
-                  <a  href="/table"><button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Go Home</button></a>
-                  <hr>
-                  
-                </div>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>eAt FoOd HeRe</h1>
+      <h3>YuMmY</h3>
 
-                <table class="table">
-                        <thead class="thead-dark">
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Party Number</th>
-                            <th scope="col">Reservation</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>4</td>
-                            <td>12</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>2</td>
-                            <td>13</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>9</td>
-                            <td>5</td>
-                          </tr>
-                        </tbody>
-                      </table>
-        </div>
-    <script>
-        $.get("/api/table", function (list){
-            console.log("inside of post")
-            console.log(list)
-            console.log("adding to....")
-        })
-    </script>
+      <a href="/table">
+        <button class="btn btn-danger btn-lg">
+          <span class="glyphicon glyphicon-eye-open"></span> Go Home</button>
+      </a>
+      <hr>
+
+    </div>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Party Number</th>
+          <th scope="col">Reservation</th>
+        </tr>
+      </thead>
+      <tbody id="tBody">
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>4</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>2</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>9</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    $.get("/api/table", function (list) {
+      // console.log("inside of post")
+      // console.log(list)
+      // console.log("adding to....")
+
+      for (var i = 0; i < list.length; i++) {
+        var tr = $("<tr>");
+        var td = $("<td>");
+        var name = list[i].name;
+        var count = list[i].count;
+        tr.append(name)
+        $("#tBody").append(tr);
+
+
+        // 
+      }
+    })
+
+  </script>
 
 </body>
+
 </html>
