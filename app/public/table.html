@@ -4,24 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
-    <title>Document</title>
-</head>
-<body>
-asdasd
-    <div id="name">
-
-    </div>
-    <div id="count">
-
-    </div>
-    <script>
-
-    </script>
-=======
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
@@ -71,8 +53,13 @@ asdasd
                         </tbody>
                       </table>
         </div>
-    
-   
->>>>>>> 6e25b1a4902c24343a02dba41f351922c7a68705
+    <script>
+        $.get("/api/table", function (list){
+            console.log("inside of post")
+            console.log(list)
+            console.log("adding to....")
+        })
+    </script>
+
 </body>
 </html>
